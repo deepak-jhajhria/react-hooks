@@ -8,10 +8,15 @@ const UseRef = () => {
         inputRef.current.focus();
     };
     const [inputValue, setInputValue] = useState("");
+    const [isInputValue, setIsInputValue] = useState("");
     const count = useRef(0);
+    const previousInputValue = useRef("");
     useEffect(() => {
         count.current = count.current + 1;
     });
+    useEffect(() => {
+        previousInputValue.current = isInputValue;
+    }, [isInputValue]);
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Ref</h1>
@@ -28,8 +33,16 @@ const UseRef = () => {
             <div className="pt-5">
                 <h2 className="text-xl font-bold text-center">Track application renders</h2>
                 <div className="flex items-center justify-center gap-5 pt-3">
-                    <input className="p-2 border border-black outline-none border-opacity-70 rounded-xl" type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
+                    <input className="p-2 border border-black outline-none border-opacity-70 rounded-xl" type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
                     <h3>Render Count: {count.current}</h3>
+                </div>
+            </div>
+            <div className="pt-5">
+                <h2 className="text-xl font-bold text-center">Tracking State Changes</h2>
+                <div className="flex flex-col items-center justify-center gap-3 pt-3">
+                    <input className="p-2 border border-black outline-none border-opacity-70 rounded-xl" type="text" value={isInputValue} onChange={(e) => setIsInputValue(e.target.value)} />
+                    <h3>Current Value: {isInputValue}</h3>
+                    <h3>Previous Value: {previousInputValue.current}</h3>
                 </div>
             </div>
         </div>
