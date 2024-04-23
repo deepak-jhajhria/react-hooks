@@ -42,14 +42,15 @@ const UseReducer = () => {
         dispatchTodo({ type: 'ADD_TODO', payload: newTodo });
         setNewTodo('');
     };
-    useEffect(()=>{
-        document.body.style.backgroundColor = theme === 'light'? 'white' : 'black';
-        document.body.style.color = theme === 'light'? 'black' : 'white';
+    useEffect(() => {
+        document.body.style.backgroundColor = theme === 'light' ? 'white' : 'black';
+        document.body.style.color = theme === 'light' ? 'black' : 'white';
+        document.body.style.borderColor = theme === 'light' ? 'black' : 'white';
     })
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Reducer</h1>
-            <p className="text-center text-gray-600">
+            <p className="text-center text-white">
                 This is a simple example of how to use Reducer in React.
             </p>
             <div className="pt-5">

@@ -20,7 +20,7 @@ const UseRef = () => {
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Ref</h1>
-            <p className="text-center text-gray-600">
+            <p className="text-center text-white">
                 This is a simple example of how to use Ref in React.
             </p>
             <div className="pt-5">

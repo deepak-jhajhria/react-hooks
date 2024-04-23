@@ -16,21 +16,21 @@ const UseEffect = () => {
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Effect</h1>
-            <p className="text-center text-gray-600">
+            <p className="text-center text-white">
                 This is a simple example of how to use Effect in React.
             </p>
             <div className="pt-5">
                 <h2 className="text-xl font-bold text-center">Timer</h2>
                 <div className="flex justify-center max-w-[500px] mx-auto gap-10 items-center pt-3">
-                    <p className="text-center text-gray-600"> {count}</p>
+                    <p className="text-center text-white"> {count}</p>
                 </div>
             </div>
             <div className="pt-5">
                 <h2 className="text-xl font-bold text-center">Counter</h2>
                 <div className="flex justify-center max-w-[500px] mx-auto gap-10 items-center pt-3">
-                    <p className="text-center text-gray-600"> {isCount}</p>
+                    <p className="text-center text-white"> {isCount}</p>
                     <button className={ComnBTn} onClick={() => setIsCount((c) => c + 1)}>+</button>
-                    <p className="text-center text-gray-600">Calculation: {calculation}</p>
+                    <p className="text-center text-white">Calculation: {calculation}</p>
                 </div>
             </div>
         </div>
