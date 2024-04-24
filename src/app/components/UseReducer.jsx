@@ -33,7 +33,7 @@ const themeReducer = (state, action) => {
     }
 };
 const UseReducer = () => {
-    const ComnBTn = "px-4 mx-5 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700 px-4 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700"
+    const ComnBTn = "px-4 mx-5 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700 px-4 py-2 font-bold bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700"
     const [state, dispatch] = useReducer(counterReducer, { count: 0 });
     const [todos, dispatchTodo] = useReducer(todoReducer, []);
     const [newTodo, setNewTodo] = useState('');
@@ -50,7 +50,7 @@ const UseReducer = () => {
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Reducer</h1>
-            <p className="text-center text-white">
+            <p className="text-center text-black">
                 This is a simple example of how to use Reducer in React.
             </p>
             <div className="pt-5">
@@ -82,11 +82,11 @@ const UseReducer = () => {
                 </div>
             </div>
             <div className="pt-5">
-                <h2 className="text-xl font-bold text-center">ToDo</h2>
-                <div className='flex flex-col items-center justify-center mx-auto'>
-                    <div>
+                <h2 className="text-xl font-bold text-center">Theme Toggle</h2>
+                <div className='flex flex-col items-center justify-center pt-3 mx-auto'>
+                    <div className='flex flex-col gap-3'>
                         <p>Current Theme: {theme}</p>
-                        <button onClick={() => dispatchTheme({ type: 'TOGGLE_THEME' })}>Toggle Theme</button>
+                        <button className={ComnBTn} onClick={() => dispatchTheme({ type: 'TOGGLE_THEME' })}>Toggle Theme</button>
                     </div>
                 </div>
             </div>

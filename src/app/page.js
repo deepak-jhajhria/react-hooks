@@ -1,3 +1,4 @@
+import UseContext from "./components/UseContext";
 import UseEffect from "./components/UseEffect";
 import UseReducer from "./components/UseReducer";
 import UseRef from "./components/UseRef";
@@ -10,6 +11,7 @@ export default function Home() {
       <UseRef />
       <UseEffect />
       <UseReducer />
+      <UseContext />
     </div>
   );
 }

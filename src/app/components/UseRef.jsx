@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react"
 
 const UseRef = () => {
-    const ComnBTn = "px-4 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700 px-4 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700"
+    const ComnBTn = "px-4 py-2 font-bold text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700 px-4 py-2 font-bold  bg-blue-500 border border-blue-500 rounded hover:bg-blue-700 hover:border-blue-700"
     const inputRef = useRef(null);
     const handleClick = () => {
         inputRef.current.focus();
@@ -20,7 +20,7 @@ const UseRef = () => {
     return (
         <div className="pt-8 mt-10 border-t border-black max-w-[700px] mx-auto pb-20">
             <h1 className="text-3xl font-bold text-center">Use Ref</h1>
-            <p className="text-center text-white">
+            <p className="text-center text-black">
                 This is a simple example of how to use Ref in React.
             </p>
             <div className="pt-5">
